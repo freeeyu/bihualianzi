@@ -1,0 +1,56 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.top{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_gif{
+    width: 350rpx;
+}
+.top_des{
+  flex:1;
+  margin-left: 14rpx;
+  font-size: 36rpx;
+  color: #999999;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+
+.fixedbutton{
+  position: fixed;
+  left: 0;bottom: 120rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.container{
+  margin-bottom: 120rpx;
+}
+.weui-media-box_appmsg{
+  display: inline-block;
+}

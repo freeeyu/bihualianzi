@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/chengyu/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/word1.png",
+        "selectedIconPath": "image/word2.png",
+        "text": "练字"
+      },
+      {
+        "pagePath": "pages/chengyu/index",
+        "iconPath": "image/chengyu1.png",
+        "selectedIconPath": "image/chengyu2.png",
+        "text": "成语"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "笔画练字",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view style="font-size:25rpx;padding-left:50rpx;">
+        下面的动图都能点哦</view>
+  <view class="top">
+        <navigator bindtap="click_index" data-zi="{{pageData.hanzi_list[0]}}" url=""><image mode="widthFix" class="img_gif" src="https://url{{pageData.gif[0]}}"></image></navigator>
+        <navigator bindtap="click_index" data-zi="{{pageData.hanzi_list[1]}}" url=""><image mode="widthFix" class="img_gif" src="https://url{{pageData.gif[1]}}"></image></navigator>
+        <navigator bindtap="click_index" data-zi="{{pageData.hanzi_list[2]}}" url=""><image mode="widthFix" class="img_gif" src="https://url{{pageData.gif[2]}}"></image></navigator>
+        <navigator bindtap="click_index" data-zi="{{pageData.hanzi_list[3]}}" url=""><image mode="widthFix" class="img_gif" src="https://url{{pageData.gif[3]}}"></image></navigator>
+      </view>
+    <view style="padding-left:50rpx;padding-right:50rpx;">
+      <view>
+        拼音:   
+        {{pageData.pinyin}}  
+      </view>
+      <view>
+        含义:   
+        {{pageData.mean}}
+      </view>
+    </view>
+    
+    <audio style="padding-top:50rpx" src="https://url/chengyu_voice/{{pageData.mp3}}" controls="true" author="笔画练字" name="{{pageData.chengyu}}"></audio>
+    
+    <view wx:for="{{pageData.png}}" class="weui-media-box weui-media-box_appmsg">
+      <image mode="widthFix" src="https://url{{item}}"></image>
+    </view>
+
+    <view class="weui-cell weui-cell_active weui-cell_vcode fixedbutton">
+                <input class="weui-input"  maxlength="4" bindblur="inputHanzi" placeholder="输入成语"/>
+                <button bindtap="searchHanzi" class="weui-btn weui-btn_primary">查找</button>
+    </view>
+            <text style="padding:10px;font-size:20rpx" class="weui-media-box__desc">
+        本小程序之图片及音频均来源于汉字屋,版权均属于汉字屋。</text>
+</view>

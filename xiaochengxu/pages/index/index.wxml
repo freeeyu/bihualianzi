@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+        <image mode="widthFix" class="img_gif" src="https://url{{pageData.bihua_gif}}"></image>
+        <view class="top_des">
+          <view>
+              组词:   
+            {{pageData.zuci}}
+          </view>
+       </view>
+  </view>
+  <view class="weui-media-box weui-media-box_appmsg">
+    <image mode="widthFix" src="https://url{{pageData.bihua_png}}"></image>
+  </view>
+    <!-- <audio  src="{{pageData.mp3}}" id="myAudio" ></audio> -->
+    <view wx:for="{{pageData.pinyins}}" class="weui-media-box weui-media-box_appmsg">
+      <audio src="https://url{{item.audio}}" controls="true" author="笔画练字" name="{{item.pinyin}}"></audio>
+    </view>
+
+    <view class="weui-cell weui-cell_active weui-cell_vcode fixedbutton">
+                <input class="weui-input"  maxlength="1" bindblur="inputHanzi" placeholder="输入汉字"/>
+                <button bindtap="searchHanzi" class="weui-btn weui-btn_primary">查找</button>
+    </view>
+    <view class="weui-cell weui-cell_active weui-cell_vcode">
+      相关成语[点击下面成语可以查看该成语详情]
+    </view>
+    <view wx:for="{{pageData.chengyus}}" class="weui-media-box weui-media-box_appmsg">
+      <navigator bindtap="click_chengyu" data-zi="{{item}}" url="">{{item}}</navigator>
+    </view>
+<!-- <text style="padding:10px;" class="weui-media-box__desc">{{content}}</text> -->
+<!-- <image mode="widthFix" src="{{src}}"></image> -->
+            <text style="padding:10px;font-size:20rpx" class="weui-media-box__desc">
+        本小程序之图片及音频均来源于汉字屋,版权均属于汉字屋。</text>
+</view>
